@@ -25,16 +25,15 @@
 
     - (void)init:(CDVInvokedUrlCommand*)command
 {
-  CDVPluginResult* pluginResult = nil;
-  NSString* init = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
 
-  if (init != nil && [init length] > 0) {
-  pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:init];
+  NSError *error;
+  BOOL success = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:&error];
+if (!success) {
+//Handle error
+NSLog(@"%@", [error localizedDescription]);
 } else {
-  pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+// Yay! It worked!
 }
-
-[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
 @end
