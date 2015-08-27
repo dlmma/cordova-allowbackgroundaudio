@@ -18,6 +18,7 @@
 */
 
 #import "CDVAllowAudio.h"
+#import <AVFoundation/AVFoundation.h>
 #import <Cordova/CDVAvailability.h>
 
 @implementation AllowAudio
@@ -25,7 +26,7 @@
     - (void)init:(CDVInvokedUrlCommand*)command
 {
   CDVPluginResult* pluginResult = nil;
-  NSString* init = [command.arguments objectAtIndex:0];
+  NSString* init = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
 
   if (init != nil && [init length] > 0) {
   pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:init];
