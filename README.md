@@ -1,0 +1,7 @@
+
+
+Supported Platforms
+-------------------
+
+- iOS
+

@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-allowbackgroundaudio",
+  "version": "1.0.0",
+  "description": "Cordova plugin for allowing background audio to keep playing",
+  "cordova": {
+    "id": "cordova-plugin-allowbackgroundaudio",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dlmma/allowbackgroundaudio.git"
+  },
+  "keywords": [
+    "cordova",
+    "background",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "audio",
+    "music"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.2.0"
+    }
+  ],
+  "author": "Frederik Wessberg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dlmma/allowbackgroundaudio/issues"
+  },
+  "homepage": "https://github.com/dlmma/allowbackgroundaudio#readme"
+}
