@@ -29,10 +29,8 @@
   NSError *error;
   BOOL success = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:&error];
 if (!success) {
-//Handle error
 NSLog(@"%@", [error localizedDescription]);
 } else {
-// Yay! It worked!
 }
 }
 
