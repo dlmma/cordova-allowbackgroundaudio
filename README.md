@@ -7,6 +7,16 @@ without stopping whenever a media element occurs in your app.
 This can be useful in case your users might listen to music or a podcast and your app has small transition sounds
 or media content.
 
+How to use
+-------------------
+
+This plugin provides a global object `AllowAudio` with the method `init`' which is not available until after the `deviceready` event.
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        AllowAudio.init();
+    }
+
 Supported Platforms
 -------------------
 
@@ -14,7 +24,7 @@ Supported Platforms
 
 License (MIT)
 -------------------
-Copyright (c) 2015> DLMMA IVS
+Copyright (c) 2015 DLMMA IVS
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
